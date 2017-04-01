@@ -12,16 +12,18 @@
   <br>
   <br>
   
-  <button ion-button full icon-left>
+  <button ion-button full icon-left (click)="takePicture()">
     <ion-icon name="camera"></ion-icon>
     Test Camera
   </button>
-  
   <br>
+  <img src="{{pathForImage(lastImage)}}" style="width: 100%" 
+      [hidden]="lastImage === null">
+  <h3 [hidden]="lastImage !== null">Please Select Image!</h3>  
   <br>
   <br>
 
-  <button ion-button full icon-left>
+  <button ion-button full icon-left >
     <ion-icon name="pin"></ion-icon>
     Test Location
   </button>

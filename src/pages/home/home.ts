@@ -28,8 +28,9 @@ export class HomePage {
     
   }
 
-  public takePicture(sourceType) {
+  public takePicture() {
     // Create options for the Camera Dialog
+    var sourceType = this.camera.PictureSourceType.CAMERA;
     var options = {
       quality: 100,
       sourceType: sourceType,
